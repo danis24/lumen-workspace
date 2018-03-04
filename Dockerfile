@@ -1,8 +1,7 @@
 FROM danis24/apache-php
 MAINTAINER Danis Yogaswara <danis@aniqma.com>
 
-RUN apt-get update && apt-get -y install git curl php-mcrypt php-json php-xml php-mbstring docker-php-ext-install zip unzip \
-      && apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get -y install git curl php-mcrypt php-json php-xml php-mbstring zip unzip && apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN /usr/sbin/a2enmod rewrite
 
