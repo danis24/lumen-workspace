@@ -11,7 +11,6 @@ RUN /usr/sbin/a2dissite '*' && /usr/sbin/a2ensite 000-lumen 001-lumen-ssl
 
 RUN /usr/bin/curl -sS https://getcomposer.org/installer |/usr/bin/php
 RUN /bin/mv composer.phar /usr/local/bin/composer
-RUN /usr/local/bin/composer update
 RUN /usr/local/bin/composer create-project laravel/lumen /var/www/lumen --prefer-dist
 RUN /bin/chown www-data:www-data -R /var/www/laravel/storage /var/www/lumen/bootstrap/cache
 
