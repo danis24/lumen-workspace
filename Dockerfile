@@ -4,7 +4,7 @@ MAINTAINER Danis Yogaswara <danis@aniqma.com>
 
 RUN apt-get update -y
 
-RUN apt-get install -y php7.1-mysql php7.1-mbstring php7.1-xml php7.1-mcrypt php7.1-json php7.1-imagick git curl zip unzip libapache2-mod-php
+RUN apt-get install -y php7.1 php7.1-mysql php7.1-mbstring php7.1-xml php7.1-mcrypt php7.1-json php7.1-imagick git curl zip unzip libapache2-mod-php
 
 RUN apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
